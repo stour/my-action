@@ -20,7 +20,7 @@
     </parent>
     <groupId>tutorial</groupId>
     <artifactId>my-action</artifactId>
-    <packaging>jar</packaging>
+    <packaging>che-plugin</packaging>
     <name>Tutorial :: My Action</name>
     <dependencies>
         <dependency>
@@ -84,5 +84,13 @@
                 <directory>src/main/resources</directory>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.che.core</groupId>
+                <artifactId>che-maven-plugin</artifactId>
+                <version>${project.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
     </build>
 </project>
